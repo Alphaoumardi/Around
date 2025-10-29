@@ -14,6 +14,8 @@ espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.8.0"
 composeBom = "2024.09.00"
+material = "1.13.0"
+picasso = "2.71828"
 sceneform = "1.23.0"
 sceneformUx = "1.17.1"
 appcompat = "1.7.1"
@@ -44,6 +46,8 @@ androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 
+material = { module = "com.google.android.material:material", version.ref = "material" }
+picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
 sceneform-ux = { group = "com.google.ar.sceneform.ux", name = "sceneform-ux", version.ref = "sceneformUx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 sceneform-v1171 = { module = "com.gorisse.thomas.sceneform:sceneform", version.ref = "sceneformVersion" }

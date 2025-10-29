@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/rootView"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/arFragment"
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="12dp"
+        android:contentDescription="Back" />
+
+</FrameLayout>

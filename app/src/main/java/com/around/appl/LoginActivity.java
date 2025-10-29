@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         // If already logged in → go to home
         FirebaseUser user = auth.getCurrentUser();
         if (user != null) {
-            startActivity(new Intent(this, HomeActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             finish();
         }
 
@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
             auth.signInWithEmailAndPassword(email, password)
                     .addOnSuccessListener(result -> {
                         Toast.makeText(this, "Login success!", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(this, HomeActivity.class));
+                        startActivity(new Intent(this, MainActivity.class));
                         finish();
                     })
                     .addOnFailureListener(e -> {
@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                         auth.createUserWithEmailAndPassword(email, password)
                                 .addOnSuccessListener(result -> {
                                     Toast.makeText(this, "Account created!", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(this, HomeActivity.class));
+                                    startActivity(new Intent(this, MainActivity.class));
                                     finish();
                                 })
                                 .addOnFailureListener(err ->
