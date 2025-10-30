@@ -32,6 +32,10 @@
         <activity android:name=".ModelViewerActivity"
                   android:exported="false"
                   android:screenOrientation="portrait"/>
+        <activity android:name=".CaptureActivity"
+                  android:exported="false"
+                  android:screenOrientation="portrait"/>
+
 
 
 

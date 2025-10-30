@@ -37,7 +37,7 @@ public class ModelAdapters extends RecyclerView.Adapter<ModelAdapters.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ModelItem model = modelList.get(position);
         holder.modelName.setText(model.getName());
-        Picasso.get().load(R.drawable.ic_menu_gallery).into(holder.thumbnail); // placeholder
+        Picasso.get().load(R.drawable.ic_camera_roll).into(holder.thumbnail); // placeholder
         holder.itemView.setOnClickListener(v -> listener.onItemClick(model));
     }
 

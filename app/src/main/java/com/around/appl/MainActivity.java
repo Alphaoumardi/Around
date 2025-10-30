@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ModelAdapters adapter;
     private List<ModelItem> modelList;
-    private FloatingActionButton addModelButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
         recyclerView = findViewById(R.id.modelRecycler);
-        addModelButton = findViewById(R.id.addModelButton);
+        FloatingActionButton addModelButton = findViewById(R.id.addModelButton);
 
         modelList = new ArrayList<>();
         adapter = new ModelAdapters(modelList, model -> {
@@ -47,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         loadModels();
 
         addModelButton.setOnClickListener(v -> {
-            //startActivity(new Intent(this, CaptureActivity.class));
-            Log.i("feature","Feature coming soon");
+            startActivity(new Intent(this, CaptureActivity.class));
+            Log.i("AddModel","Feature coming soon");
         });
     }
 
@@ -61,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                         return;
                     }
                     modelList.clear();
+                    assert value != null;
                     for (DocumentSnapshot doc : value.getDocuments()) {
                         ModelItem model = doc.toObject(ModelItem.class);
                         modelList.add(model);
